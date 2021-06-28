@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#BBF4F1"
+
+    >
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/teal_200"
+        app:headerLayout="@layout/left_drawer"
+        app:menu="@menu/left_drawer" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/searchfile">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Search Appointments.."
+        android:layout_margin="10dp"
+        android:textSize="14dp"
+        android:paddingRight="30dp"
+        android:backgroundTint="#00FFFFFF"
+
+
+        />
+
+
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="533dp"
+        android:text="Appointment History"
+        android:textColor="@color/teal_700"
+        android:textSize="16dp"
+       />
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="392dp"
+        android:text="+ Add Photos"
+        android:textSize="12dp"
+        android:backgroundTint="@color/teal_200"
+        />
+
+    <RelativeLayout
+        android:layout_width="700dp"
+        android:layout_height="200dp"
+        android:background="@drawable/searchfile"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="106dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Good Morning ,"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:id="@+id/goodmorning"
+            android:textStyle="bold"
+            android:textSize="40dp"
+            android:textColor="@color/teal_200"
+            android:fontFamily="sans-serif-light"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/goodmorning"
+            android:text=" Dr. Smith"
+            android:textColor="@color/purple_200"
+            android:textSize="40dp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-light"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have a nice day at Work"
+            android:layout_below="@+id/goodmorning"
+            android:fontFamily="sans-serif-light"
+            android:textSize="18dp"
+            android:layout_marginLeft="80dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginTop="330dp"
+        android:text="Weekly Reports"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-smallcaps"
+        android:id="@+id/weekly"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:elevation="100dp"
+        android:id="@+id/patientcard"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/weekly"
+        android:layout_marginLeft="149dp"
+        app:cardCornerRadius="30dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/patient"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/patient"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total patient"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="105dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:elevation="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/weekly"
+        android:layout_marginLeft="300dp"
+        app:cardCornerRadius="30dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/phone"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/phone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Calls"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="105dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="356"
+            android:layout_gravity="center_horizontal"
+            android:textSize="35dp"
+            android:layout_marginTop="135dp"
+            android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:elevation="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/weekly"
+        android:layout_marginLeft="450dp"
+        app:cardCornerRadius="30dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/appointment"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/appointment"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Appointments"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="105dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="288"
+            android:layout_gravity="center_horizontal"
+            android:textSize="35dp"
+            android:layout_marginTop="135dp"
+            android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:elevation="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/weekly"
+        android:layout_marginLeft="600dp"
+        app:cardCornerRadius="30dp"
+        android:background="@color/white">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/mail"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/unread"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unread Mail"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="105dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="288"
+            android:layout_gravity="center_horizontal"
+            android:textSize="35dp"
+            android:layout_marginTop="135dp"
+            android:textStyle="bold"/>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="200dp"
+        android:elevation="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/weekly"
+        android:layout_marginLeft="750dp"
+        app:cardCornerRadius="30dp"
+        app:cardBackgroundColor="#DCDCDC">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_add_24"
+            android:layout_gravity="center_vertical||center_horizontal"
+            />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="135dp"
+        android:layout_height="70dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="530dp"
+        android:background="@drawable/count"
+        android:textAlignment="center"
+        android:gravity="center_vertical"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:text="580"
+        android:elevation="200dp"
+        android:textSize="35dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="My Apointments"
+        android:textColor="@color/teal_700"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="150dp"
+        android:textStyle="bold"
+        android:id="@+id/appointments"
+        android:layout_below="@+id/patientcard"/>
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:id="@+id/name"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/appointments"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/name"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_arrow_drop_up_24"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/name"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:id="@+id/location"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="380dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/appointments"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/location"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_arrow_drop_up_24"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/location"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:id="@+id/Date"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="510dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/appointments"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/Date"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_arrow_drop_up_24"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/Date"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:id="@+id/time"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="600dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/appointments"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/time"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_arrow_drop_up_24"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/time"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:id="@+id/status"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginLeft="680dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/appointments"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/status"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_baseline_arrow_drop_up_24"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/status"
+        android:layout_below="@id/appointments"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/ic_baseline_arrow_drop_down_24"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="8dp"
+        android:background="@drawable/searchfile"
+        android:layout_toRightOf="@id/status"
+        android:layout_marginLeft="60dp"
+        android:src="@drawable/setting"
+        android:layout_below="@id/appointments"/>
+
+    <LinearLayout
+        android:layout_width="700dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Date"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:background="@drawable/searchfile"
+        android:layout_marginLeft="150dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:src="@drawable/profile"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Random Name"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="New York"
+            android:layout_marginLeft="80dp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="24 june"
+            android:layout_marginLeft="50dp"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1:00 PM"
+            android:layout_marginLeft="50dp"
+            android:gravity="center"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:src="@drawable/ic_baseline_access_alarm_24"/>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/right_bar"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_baseline_settings_24"
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/teal_700"
+                android:src="@drawable/bell" />
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/profile"
+                android:background=""/>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Schedule Calender"
+                android:textStyle="bold"
+                android:textColor="@color/teal_700"
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:background="@drawable/greensih"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="JAN"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:background="@drawable/greensih"
+                android:padding="5dp"
+                android:layout_marginLeft="60dp"/>
+
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,2 @@
+rootProject.name = "hexwield"
+include ':app'
